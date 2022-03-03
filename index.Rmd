@@ -35,11 +35,17 @@ library(circular)
 knitr::include_graphics("Z.png")
 ```
 
-
-## Statistics
+## Statistics?
 
 ```{r, out.width = "600px"}
-knitr::include_graphics("chair.jpeg")
+knitr::include_graphics("zscore.png")
+```
+
+
+## Ending a Conversation (with Statistics)
+
+```{r, out.width = "600px"}
+knitr::include_graphics("chair.png")
 ```
 
 
@@ -47,6 +53,12 @@ knitr::include_graphics("chair.jpeg")
 
 ```{r, out.width = "900px"}
 knitr::include_graphics("Z2.png")
+```
+
+## Statistics?
+
+```{r, out.width = "600px"}
+knitr::include_graphics("zscore2.png")
 ```
 
 
