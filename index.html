@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Andy Hoegh" />
+  <title>Ecological Statistics in the Greater Yellowstone Ecosystem</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="index_files/header-attrs-2.10/header-attrs.js"></script>
+    <link href="index_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="index_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Ecological Statistics in the Greater Yellowstone Ecosystem</h1>
+    <h2 class="author">Andy Hoegh</h2>
+</section>
+
+<section id="statistics" class="slide level2">
+<h2>Statistics?</h2>
+<p><img src="Z.png" width="900px" /></p>
+</section>
+<section id="statistics-1" class="slide level2">
+<h2>Statistics</h2>
+<p><img src="chair.jpeg" width="600px" /></p>
+</section>
+<section id="statistics-2" class="slide level2">
+<h2>Statistics?</h2>
+<p><img src="Z2.png" width="900px" /></p>
+</section>
+<section id="statistics-3" class="slide level2">
+<h2>Statistics</h2>
+<p>“The best thing about being a statistician is that you get to play in everyone’s backyard.” - John Tukey <img src="Golden-Eagle.png" width="600px" /></p>
+</section>
+<section id="statistics-4" class="slide level2">
+<h2>Statistics</h2>
+<p><img src="field.png" width="800px" /></p>
+</section>
+<section id="my-research-philosophy" class="slide level2">
+<h2>My Research Philosophy</h2>
+<p>Statistics serves as the interface for answering challenging scientific problems while collaborating with scientists:</p>
+<ul>
+<li>Adam Sepulveda, US Geological Survey</li>
+<li>Kathi Irvine, US Geological Survey</li>
+<li>Frank van Manen &amp; Mark Haroldson, US Geological Survey</li>
+</ul>
+</section>
+<section id="bees" class="slide level2">
+<h2>BEES</h2>
+<p><img src="BEES.png" width="1000px" /></p>
+</section>
+<section id="evaluating-zebra-mussels-detection-and-monitoring" class="slide level2">
+<h2>Evaluating Zebra Mussels Detection and Monitoring</h2>
+<p><img src="zebra.png" width="600px" /></p>
+</section>
+<section id="edna-biosurveillance-of-harmful-organisms-and-invasive-species" class="slide level2">
+<h2>EDNA Biosurveillance of Harmful Organisms and Invasive Species</h2>
+<p><img src="https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/26/12683bb0-f297-5d98-aad8-f08d34b7a683/57b73db33ce8d.image.jpg?resize=1200%2C783" width="800px" /></p>
+</section>
+<section id="understanding-grizzly-bear-dispersal-behavior" class="slide level2">
+<h2>Understanding Grizzly Bear Dispersal Behavior</h2>
+<p><img src="https://www.nps.gov/yell/learn/nature/images/griz_sow.jpg?maxwidth=1200&maxheight=1200&autorotate=false" width="800px" /></p>
+</section>
+<section id="understanding-climate-change-impacts-on-plant-communities" class="slide level2">
+<h2>Understanding Climate Change Impacts on Plant Communities</h2>
+<p><img src="Teton.png" width="900px" /></p>
+</section>
+<section id="plankton-tows-for-zebra-mussell-detection" class="slide level2">
+<h2>Plankton Tows for Zebra Mussell Detection</h2>
+<h3 id="meaghan-winder-with-adam-sepuleveda">Meaghan Winder with Adam Sepuleveda</h3>
+<p><img src="http://stopaquatichitchhikers.org/content/uploads/2016/10/quagga-and-zebra-mussels.jpg" width="300px" /></p>
+</section>
+<section id="boat-inspection" class="slide level2">
+<h2>Boat Inspection</h2>
+<p><img src="https://mediad.publicbroadcasting.net/p/kufm/files/styles/large/public/201407/Boat_Check.jpg" width="700px" /></p>
+</section>
+<section id="plankton-tows-for-zebra-mussell-detection-1" class="slide level2">
+<h2>Plankton Tows for Zebra Mussell Detection</h2>
+<p><img src="https://vtwatershedblog.files.wordpress.com/2017/08/ais_internusingplanktonnettocollectsamples1.jpg" width="600px" /></p>
+</section>
+<section id="research-problem" class="slide level2">
+<h2>Research Problem</h2>
+<ul>
+<li class="fragment"><p>Understand detection probability of current sampling efforts and implications on management decisions.</p></li>
+<li class="fragment"><p>Make recommendations for future management decisions.</p></li>
+</ul>
+</section>
+<section>
+<section id="edna-biosurveillance-for-harmful-organisms-and-invasive-species" class="title-slide slide level1">
+<h1>EDNA Biosurveillance for Harmful Organisms and Invasive Species</h1>
+
+</section>
+<section id="edna-biosurveillance" class="slide level2">
+<h2>EDNA Biosurveillance</h2>
+<h3 id="christian-stratton-with-adam-sepulveda">Christian Stratton with Adam Sepulveda</h3>
+<p><img src="https://bloximages.chicago2.vip.townnews.com/billingsgazette.com/content/tncms/assets/v3/editorial/b/2b/b2b0ff95-fb84-555d-9bfc-3a69a4dcce43/57b20b5e89ab0.image.jpg?resize=1200%2C783" width="700px" /></p>
+</section>
+<section id="mountain-whitefish-and-pkd" class="slide level2">
+<h2>Mountain Whitefish and PKD</h2>
+<p><img src="https://www.nps.gov/yell/learn/nature/images/whitefish_ZacSexton.jpg?maxwidth=1200&maxheight=1200&autorotate=false" width="700px" /></p>
+</section>
+<section id="research-problem-1" class="slide level2">
+<h2>Research Problem</h2>
+<ul>
+<li class="fragment"><p>Use robotic samplers with environmental DNA (eDNA) capability for real-time surveillance and near-term forecasting of aquatic invasive species and harmful organisms.</p></li>
+<li class="fragment"><p>This requires developing computationally-efficient spatiotemporal multiscale occupancy models.</p></li>
+</ul>
+</section>
+<section id="environmental-dna" class="slide level2">
+<h2>Environmental DNA</h2>
+<p><img src="https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/wss-qw-edna-diagram.png" width="700px" /></p>
+</section>
+<section id="data-collection" class="slide level2">
+<h2>Data Collection</h2>
+<p><img src="Data.png" width="650px" /></p>
+</section>
+<section id="occupancy-model-data-framework" class="slide level2">
+<h2>Occupancy Model Data Framework</h2>
+<ul>
+<li class="fragment"><p>Presence Data: <img src="positive.png" width="50px" /> Species occurs in the region AND species is detected with eDNA</p></li>
+<li class="fragment"><p>Absence Data: <img src="negative.png" width="50px" /> Species does not occur in the region OR species is not detected with eDNA.</p></li>
+<li class="fragment"><p>Detection Probability: Occupancy model accounts for probability of detecting organism when it is present.</p></li>
+</ul>
+</section>
+<section id="multiscale-occupancy-model" class="slide level2">
+<h2>Multiscale Occupancy Model</h2>
+<p>Two detection probabilities are necessary</p>
+<ol type="1">
+<li class="fragment"><p>probability of detecting eDNA in bottle, given it is present at site <img src="bottle.png" width="50px" /></p></li>
+<li class="fragment"><p>probability of detecting eDNA in the pipette, given it is in bottle <img src="positive.png" width="50px" /></p></li>
+</ol>
+</section>
+<section id="robot-sampler" class="slide level2">
+<h2>Robot Sampler</h2>
+<p><em>Streaming</em> data collection possible for environmental DNA using robot samplers.</p>
+<p><img src="https://pbs.twimg.com/media/D35OZMtWsAI69XX.jpg" width="500px" /></p>
+</section>
+<section id="efficient-computation-and-software" class="slide level2">
+<h2>Efficient Computation and Software</h2>
+<ul>
+<li>Polya-Gamma data augmentation permits Gibbs sampling (efficient MCMC) for logistic regression models.</li>
+</ul>
+<ul>
+<li class="fragment"><p>Spatial and temporal correlation modeled using dynamic linear models and Gaussian process extensions for Polya-Gamma latent variables, in progress.</p></li>
+<li class="fragment"><p>Software package available on github (<code>msocc</code>).</p></li>
+<li class="fragment"><p>R shiny app for sample size calculations and data visualization.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="collective-animal-movement-models" class="title-slide slide level1">
+<h1>Collective Animal Movement Models</h1>
+
+</section>
+<section id="movement-models-for-grizzly-bears" class="slide level2">
+<h2>Movement Models for Grizzly Bears</h2>
+<p><img src="https://www.nps.gov/yell/learn/nature/images/griz_sow.jpg?maxwidth=1200&maxheight=1200&autorotate=false" width="600px" /></p>
+<p>with Frank Van Manen and Mark Haroldson</p>
+<p>Previous work by Chris Peck and Jacob Dym</p>
+</section>
+<section id="section" class="slide level2" data-background-video="animation.mp4">
+<h2 data-background-video="animation.mp4"></h2>
+</section>
+<section id="research-problem-expanding-grizzly-range" class="slide level2">
+<h2>Research Problem: Expanding Grizzly Range</h2>
+<p><img src="https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/15-yr-window-1990-2018.gif" width="800px" /></p>
+</section>
+<section id="research-problem-2" class="slide level2">
+<h2>Research Problem</h2>
+<ul>
+<li class="fragment"><p>Use historical telemetric data from individual grizzly bears to understand and model population dynamics.</p></li>
+<li class="fragment"><p>Grizzly bears establish a home range and can be territorial.</p></li>
+<li class="fragment"><p>Range expansion is typically a product of males (young or old) searching for their own home range.</p></li>
+</ul>
+</section>
+<section id="animal-movement-models" class="slide level2">
+<h2>ANIMAL MOVEMENT MODELS</h2>
+</section>
+<section id="step-length-and-angular-direction" class="slide level2">
+<h2>Step Length and Angular Direction</h2>
+<ul>
+<li class="fragment"><p>Step Length: is a distribution for distance traveled in a specific period</p></li>
+<li class="fragment"><p>Angular Direction:<br />
+<img src="index_files/figure-revealjs/unnamed-chunk-25-1.png" width="400px" /></p></li>
+</ul>
+</section>
+<section id="step-length-and-angular-direction-1" class="slide level2">
+<h2>Step Length and Angular Direction</h2>
+<p><img src="turn_angle.png" width="900px" /></p>
+</section>
+<section id="collective-movement" class="slide level2">
+<h2>Collective Movement</h2>
+<p>Collective animal movement refers to a situation where animals influence each others behavior.</p>
+<p>Commonly, there are three types of behaviors considered</p>
+<ul>
+<li class="fragment">Attraction</li>
+<li class="fragment">Alignment</li>
+<li class="fragment">Repulsion</li>
+</ul>
+</section>
+<section id="agent-based-models" class="slide level2">
+<h2>Agent Based Models</h2>
+<ul>
+<li class="fragment">Agent based models are a simulation based approach using a set of <em>agents</em>.</li>
+<li class="fragment">Each agent is given a relatively simple set of rules, which control interactions between agents.</li>
+<li class="fragment">The collective behavior of agents can model complex population level characteristics.</li>
+</ul>
+</section>
+<section id="self-propelled-particles" class="slide level2">
+<h2>Self Propelled Particles</h2>
+<p><em>The only rule of the model is: at each time step a given particle driven with a constant absolute velocity assumes the average direction of motion of the particles in its neighborhood of radius r with some random perturbation added.</em></p>
+<p>Vicsek, et. al 1995.</p>
+</section>
+<section id="agent-properties-for-grizzly-bears" class="slide level2">
+<h2>Agent Properties for Grizzly Bears</h2>
+<p>The agents have a set of characteristics:</p>
+<ul>
+<li class="fragment">movement speed</li>
+<li class="fragment">angular heading</li>
+<li class="fragment">home range affinity</li>
+</ul>
+<p>Furthermore the characteristics will vary:</p>
+<ul>
+<li class="fragment">based on a Markov switching model to determine whether the bear is dispersing</li>
+</ul>
+</section>
+<section id="statistical-model-fitting" class="slide level2">
+<h2>Statistical Model Fitting</h2>
+<ul>
+<li class="fragment">Complex, collective movement models where agents interact pose challenges for parameter estimation.</li>
+<li class="fragment">Parameters associated with the agent rules are estimated to allow for uncertainty in model parameters.</li>
+</ul>
+</section>
+<section id="agent-based-models-as-state-space-model" class="slide level2">
+<h2>Agent-Based Models as State Space Model</h2>
+<ul>
+<li class="fragment"><p>We want to estimate model parameters, such as those in the probability distributions for step size and turning angle.</p></li>
+<li class="fragment"><p>However for each agent at a given time we also need to estimate a set of “state parameters”:</p>
+<ul>
+<li class="fragment">step size for time t</li>
+<li class="fragment">turning angle for time t</li>
+<li class="fragment">agent location (x and y) coordinates</li>
+</ul></li>
+</ul>
+</section>
+<section id="particle-mcmc" class="slide level2">
+<h2>Particle-MCMC</h2>
+<ul>
+<li class="fragment"><p>Particle-MCMC combines particle-based methods with Markov Chain Monte Carlo</p></li>
+<li class="fragment"><p>A particle filter is used to propose the state variables in the MCMC framework</p></li>
+</ul>
+</section>
+<section id="findings" class="slide level2">
+<h2>Findings</h2>
+<ul>
+<li class="fragment"><p>We found that the data supported the Markov switching model (based on proximity) as the bears tended to switch from an “home range state” to an “exploring state” with higher frequency when other bears were in the proximity.</p></li>
+<li class="fragment"><p>Stay tuned for where / when those bears might show up.</p></li>
+</ul>
+</section></section>
+<section id="section-1" class="title-slide slide level1">
+<h1></h1>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Thats_all_folks.svg" width="800px" /></p>
+</section>
+
+<section>
+<section id="hierarchical-spatio-temporal-spp-model" class="title-slide slide level1">
+<h1>HIERARCHICAL SPATIO-TEMPORAL SPP MODEL</h1>
+
+</section>
+<section id="data-model" class="slide level2">
+<h2>Data Model</h2>
+<p><span class="math display">\[\underline{z}_{t} = H_t \underline{s}_{t} + \underline{\epsilon}_t, \; \; \;\;\;\; \underline{\epsilon}_t \sim N(0,\sigma^2_{\epsilon} I)\]</span> where <span class="math inline">\(\underline{z}_t\)</span> is a matrix of the observed locations for the agents at time t, <span class="math inline">\(H_t\)</span> is an incidence matrix to determine whether an agent is observed at time t, <span class="math inline">\(\underline{s}_t\)</span> is the latent location at time, and <span class="math inline">\(\epsilon_t\)</span> is the error process</p>
+</section>
+<section id="process-model" class="slide level2">
+<h2>Process Model</h2>
+<p><span class="math display">\[\underline{s}_{i,t} = \underline{s}_{i,t-1} + u_{i,t}\underline{\delta}_{i,t} + \underline{\eta}_{i,t}\]</span></p>
+<ul>
+<li><span class="math inline">\(u_{i,t}\)</span> represents the speed</li>
+<li><span class="math inline">\(\underline{\delta}_{i,t}\)</span> is a unit vector for the directional component of the velocity</li>
+</ul>
+<h4 id="angular-heading">Angular Heading</h4>
+<p><span class="math display">\[\left(\delta_{x,i,t}, \delta_{y,i,t}\right)&#39; = \left( \cos(\theta_{i,t}), \sin(\theta_{i,t}) \right)\]</span> <span class="math display">\[\theta_{i,t}  \sim ProjNormal(\mu, \kappa)\]</span> &gt;- <span class="math inline">\(\mu\)</span> is an angular heading and <span class="math inline">\(\kappa\)</span> is a concentration parameter</p>
+<h4 id="speed">Speed</h4>
+<p><span class="math display">\[u_{i,t} = LN(\mu_u, \sigma^2_u)\]</span></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="index_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+
+
+        chalkboard: {
+          toggleNotesButton: true,
+          theme: 'whiteboard',
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
