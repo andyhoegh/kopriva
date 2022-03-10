@@ -31,16 +31,22 @@ library(circular)
 
 ## Statistics?
 
-```{r, out.width = "900px"}
-knitr::include_graphics("Z.png")
-```
-
-## Statistics?
-
 ```{r, out.width = "600px"}
 knitr::include_graphics("zscore.png")
 ```
 
+## Statistics?
+
+```{r, out.width = "900px"}
+knitr::include_graphics("Z.png")
+```
+
+
+## Statistics?
+
+```{r, out.width = "600px"}
+knitr::include_graphics("chair.png")
+```
 
 ## Ending a Conversation (with Statistics)
 
@@ -62,85 +68,145 @@ knitr::include_graphics("zscore2.png")
 ```
 
 
-## Statistics
+## Statistics and Science
 
 “The best thing about being a statistician is that you get to play in everyone’s backyard.” - John Tukey
-```{r, out.width = "600px"}
-knitr::include_graphics("Golden-Eagle.png")
+```{r, out.width = "400px"}
+knitr::include_graphics("GYE.png")
 ```
 
+## Statistics and Science
 
-## Statistics
+```{r, out.width = "800px"}
+knitr::include_graphics("water.png")
+```
+
+## Statistics and Science
 
 ```{r, out.width = "800px"}
 knitr::include_graphics("field.png")
 ```
 
 
-## My Research Philosophy
-
+## Collaborative Science
 
 Statistics serves as the interface for answering challenging scientific problems while collaborating with scientists:
 
 >- Adam Sepulveda, US Geological Survey
->- Kathi Irvine, US Geological Survey
 >- Frank van Manen & Mark Haroldson, US Geological Survey
+>- Kathi Irvine, US Geological Survey
 
 ## BEES
 
 ```{r, out.width = "1000px"}
 knitr::include_graphics("BEES.png")
 ```
+contact: andrew.hoegh@montana.edu
 
-## Evaluating Zebra Mussels Detection and Monitoring
+## Evaluating Zebra Mussel Monitoring
 
 ```{r, out.width = "600px"}
 knitr::include_graphics("zebra.png")
 ```
 
-## EDNA Biosurveillance of Harmful Organisms and Invasive Species
+## EDNA Biosurveillance 
 
 ```{r, out.width = "800px"}
 knitr::include_graphics("https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/26/12683bb0-f297-5d98-aad8-f08d34b7a683/57b73db33ce8d.image.jpg?resize=1200%2C783")
 ```
 
 
-## Understanding Grizzly Bear Dispersal Behavior
+## Grizzly Bear Dispersal Behavior
 ```{r, out.width = "800px"}
 knitr::include_graphics("https://www.nps.gov/yell/learn/nature/images/griz_sow.jpg?maxwidth=1200&maxheight=1200&autorotate=false")
 ```
 
-## Understanding Climate Change Impacts on Plant Communities
+## Climate Change Impacts on Plant Communities
 
 ```{r, out.width = "900px"}
 knitr::include_graphics("Teton.png")
 ```
 
 
+# Evaluating Zebra Mussel Monitoring
 
-## Plankton Tows for Zebra Mussell Detection
+## Evaluating Zebra Mussel Monitoring
 ### Meaghan Winder with Adam Sepuleveda
-```{r, out.width = "300px"}
-knitr::include_graphics("http://stopaquatichitchhikers.org/content/uploads/2016/10/quagga-and-zebra-mussels.jpg")
-```
-
-## Boat Inspection
 ```{r, out.width = "700px"}
 knitr::include_graphics("https://mediad.publicbroadcasting.net/p/kufm/files/styles/large/public/201407/Boat_Check.jpg")
 ```
 
-
-## Plankton Tows for Zebra Mussell Detection
+## Goal: evaluate current monitoring regime
 ```{r, out.width = "600px"}
-knitr::include_graphics("https://vtwatershedblog.files.wordpress.com/2017/08/ais_internusingplanktonnettocollectsamples1.jpg")
+knitr::include_graphics("planktontow.jpg")
 ```
 
-## Research Problem
+## Plankton Tows
+```{r, out.width = "600px"}
+knitr::include_graphics("tow.png")
+```
 
-- Understand detection probability of current sampling efforts and implications on management decisions.
 
-- Make recommendations for future management decisions.
+## Plankton Tows: Samples
 
+Do we think zebra mussels are present?
+
+```{r, out.width = "100px"}
+knitr::include_graphics("sample1jar.png")
+```
+
+## Plankton Tows: Samples
+
+Do we think zebra mussels are present?
+
+```{r, out.width = "300px"}
+knitr::include_graphics("samples1.png")
+```
+
+## Plankton Tows: Samples
+
+How about now?
+
+```{r, out.width = "600px"}
+knitr::include_graphics("samples2.png")
+```
+
+## Plankton Tows: Samples
+
+```{r, out.width = "900px"}
+knitr::include_graphics("samples3.png")
+```
+
+## Detection Probability
+
+- In biological settings, many organisms are elusive or hard to detect
+- Not identifying the organism does not mean it is not present
+- Understanding _detection probability_ is essential for monitoring programs
+- Statistics (occupancy models) can be used to estimate detection probability
+
+## Detection Probability for Zebra Mussels
+
+Depends on characteristics of the water body
+
+```{r, out.width = "800px"}
+knitr::include_graphics("detection_fig.png")
+```
+
+## Sampling Intensity
+
+Almost certainly need to increase sampling intensity
+
+```{r, out.width = "800px"}
+knitr::include_graphics("DetectionProb.png")
+```
+
+## Sampling Intensity
+
+Testing samples from individual tows provides better estimate of detection probability
+
+```{r, out.width = "800px"}
+knitr::include_graphics("tow_data.png")
+```
 
 
 # EDNA Biosurveillance for Harmful Organisms and Invasive Species
@@ -148,22 +214,10 @@ knitr::include_graphics("https://vtwatershedblog.files.wordpress.com/2017/08/ais
 ## EDNA Biosurveillance 
 ### Christian Stratton with Adam Sepulveda
 
-```{r, out.width = "700px"}
-knitr::include_graphics("https://bloximages.chicago2.vip.townnews.com/billingsgazette.com/content/tncms/assets/v3/editorial/b/2b/b2b0ff95-fb84-555d-9bfc-3a69a4dcce43/57b20b5e89ab0.image.jpg?resize=1200%2C783")
+```{r, out.width = "600px"}
+knitr::include_graphics("water2.png")
 ```
 
-
-## Mountain Whitefish and PKD
-```{r, out.width = "700px"}
-knitr::include_graphics("https://www.nps.gov/yell/learn/nature/images/whitefish_ZacSexton.jpg?maxwidth=1200&maxheight=1200&autorotate=false")
-```
-
-
-## Research Problem
-
-- Use robotic samplers with environmental DNA (eDNA) capability for real-time surveillance and near-term forecasting of aquatic invasive species and harmful organisms.
-
-- This requires developing computationally-efficient spatiotemporal multiscale occupancy models.
 
 ## Environmental DNA
 
@@ -171,6 +225,10 @@ knitr::include_graphics("https://www.nps.gov/yell/learn/nature/images/whitefish_
 knitr::include_graphics("https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/wss-qw-edna-diagram.png")
 ```
 
+## Goal: Develop computationally-efficient software for eDNA surveillance
+```{r, out.width = "700px"}
+knitr::include_graphics("https://www.nps.gov/yell/learn/nature/images/whitefish_ZacSexton.jpg?maxwidth=1200&maxheight=1200&autorotate=false")
+```
 
 ## Data Collection
 
@@ -178,27 +236,25 @@ knitr::include_graphics("https://prd-wret.s3-us-west-2.amazonaws.com/assets/pall
 knitr::include_graphics("Data.png")
 ```
 
-## Occupancy Model Data Framework
+## EDNA Data Structure
 
-- Presence Data: 
+>- Presence Data: 
 ```{r, out.width = "50px"}
 knitr::include_graphics("positive.png")
 ```
-Species occurs in the region AND species is detected with eDNA
+Species occurs AND species is detected with eDNA
 	
 - Absence Data:
 ```{r, out.width = "50px"}
 knitr::include_graphics("negative.png")
 ```
-Species does not occur in the region OR species is not detected with eDNA.
-
-- Detection Probability: Occupancy model accounts for probability of detecting organism when it is present.	
+Species does not occur OR species is not detected with eDNA.
 
 ## Multiscale Occupancy Model
 
 Two detection probabilities are necessary
 
-1. probability of detecting eDNA in bottle, given it is present at site 
+>1. probability of detecting eDNA in bottle, given it is at site 
 ```{r, out.width = "50px"}
 knitr::include_graphics("bottle.png")
 ```
@@ -208,27 +264,21 @@ knitr::include_graphics("bottle.png")
 knitr::include_graphics("positive.png")
 ```
 
-## Robot Sampler
-_Streaming_ data collection possible for environmental DNA using robot samplers.
+## Efficient Computation and Software
+```{r, out.width = "1000px"}
+knitr::include_graphics("msocc.png")
+```
+
+## Future Goals: _Streaming_ analysis
 
 ```{r, out.width = "500px"}
 knitr::include_graphics("https://pbs.twimg.com/media/D35OZMtWsAI69XX.jpg")
 ```
 
 
-## Efficient Computation and Software
->- Polya-Gamma data augmentation permits Gibbs sampling (efficient MCMC) for logistic regression models.
+# Understanding Grizzly Bear Dispersal Behavior
 
-- Spatial and temporal correlation modeled using dynamic linear models and Gaussian process extensions for Polya-Gamma latent variables, in progress.
-
-- Software package available on github (`msocc`).
-
-- R shiny app for sample size calculations and data visualization.
-
-
-# Collective Animal Movement Models
-
-## Movement Models for Grizzly Bears
+## Collective Movement Models for Grizzly Bears
 ```{r, out.width = "600px"}
 knitr::include_graphics("https://www.nps.gov/yell/learn/nature/images/griz_sow.jpg?maxwidth=1200&maxheight=1200&autorotate=false")
 ```
@@ -238,24 +288,28 @@ with Frank Van Manen and Mark Haroldson
 Previous work by Chris Peck and Jacob Dym
 
 
-## {data-background-video="animation.mp4"}
-
-## Research Problem: Expanding Grizzly Range
+## Goal: Predict Expanding Grizzly Range
 ```{r, out.width = "800px"}
 knitr::include_graphics("https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/15-yr-window-1990-2018.gif")
 ```
 
-## Research Problem
+## {data-background-video="animation.mp4"}
 
-- Use historical telemetric data from individual grizzly bears to understand and model population dynamics.
 
-- Grizzly bears establish a home range and can be territorial.
+## Dispersal Dynamics
 
-- Range expansion is typically a product of males (young or old) searching for their own home range.
+```{r, out.width = "600px"}
+knitr::include_graphics("plinko.jpg")
+```
 
-## ANIMAL MOVEMENT MODELS
+## Telemetric Data to Movement Modeling
 
-## Step Length and Angular Direction
+```{r, out.width = "900px"}
+knitr::include_graphics("turn_angle.png")
+```
+
+
+## Animal Movement Models
 
 - Step Length: is a distribution for distance traveled in a specific period
 
@@ -268,101 +322,113 @@ plot(data.vm, stack=TRUE, bins=150, main = 'Histogram of Angular Data')
 
 ```
 
-## Step Length and Angular Direction
+## Collective Movement and Agent Based Models
 
-```{r, out.width = "900px"}
-knitr::include_graphics("turn_angle.png")
-```
-
-
-## Collective Movement
-
-Collective animal movement refers to a situation where animals influence each others behavior.
-
-Commonly, there are three types of behaviors considered
-
-- Attraction
-- Alignment
-- Repulsion
-
-
-## Agent Based Models
+-Collective animal movement refers to a situation where animals influence each others behavior.
 
 - Agent based models are a simulation based approach using a set of _agents_.
 - Each agent is given a relatively simple set of rules, which control interactions between agents.
 - The collective behavior of agents can model complex population level characteristics.
 
-## Self Propelled Particles
 
-_The only rule of the model is: at each time step a given particle driven with a constant absolute velocity assumes the average direction of motion of the particles in its neighborhood of radius r with some random perturbation added._ 
+## Independent Model
 
-Vicsek, et. al 1995.
+```{r, out.width = "600px"}
+knitr::include_graphics("indep.png")
+```
 
-## Agent Properties for Grizzly Bears
-The agents have a set of characteristics:
+## Collective Model
 
-- movement speed
-- angular heading
-- home range affinity
-
-Furthermore the characteristics will vary:
-
-- based on a Markov switching model to determine whether the bear is dispersing
-
-
-## Statistical Model Fitting
-- Complex, collective movement models where agents interact pose challenges for parameter estimation.
-- Parameters associated with the agent rules are estimated to allow for uncertainty in model parameters.
-
-## Agent-Based Models as State Space Model
-- We want to estimate model parameters, such as those in the probability distributions for step size and turning angle.
-
-- However for each agent at a given time we also need to estimate a set of "state parameters":
-
-    - step size for time t
-    - turning angle for time t
-    - agent location (x and y) coordinates
-
-## Particle-MCMC
-
-- Particle-MCMC combines particle-based methods with Markov Chain Monte Carlo
-
-- A particle filter is used to propose the state variables in the MCMC framework
-
-## Findings
-
-- We found that the data supported the Markov switching model (based on proximity) as the bears tended to switch from an "home range state" to an "exploring state" with higher frequency when other bears were in the proximity.
-
-- Stay tuned for where / when those bears might show up.
-
-# 
-
-```{r, out.width = "800px"}
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/e/ea/Thats_all_folks.svg")
+```{r, out.width = "600px"}
+knitr::include_graphics("collective.png")
 ```
 
 
+## Findings
+
+- We found that bears tended to switch from an "home range state" to an "exploring state" when other bears were in the proximity.
+
+- Still working to include spatial covariates
 
 
-# HIERARCHICAL SPATIO-TEMPORAL SPP MODEL
+## Predictive Map (still to come)
 
-## Data Model
+```{r, out.width = "600px"}
+knitr::include_graphics("notfound.png")
+```
 
-$$\underline{z}_{t} = H_t \underline{s}_{t} + \underline{\epsilon}_t, \; \; \;\;\;\; \underline{\epsilon}_t \sim N(0,\sigma^2_{\epsilon} I)$$
-where $\underline{z}_t$ is a matrix of the observed locations for the agents at time t, $H_t$ is an incidence matrix to determine whether an agent is observed at time t, $\underline{s}_t$ is the latent location at time, and $\epsilon_t$ is the error process
+# Climate Change Impacts on Plant Communities
 
-## Process Model
+## Climate Monitoring in Grand Teton NP
 
-$$\underline{s}_{i,t} = \underline{s}_{i,t-1} + u_{i,t}\underline{\delta}_{i,t} + \underline{\eta}_{i,t}$$
+```{r, out.width = "900px"}
+knitr::include_graphics("Teton.png")
+```
 
->- $u_{i,t}$ represents the speed
->- $\underline{\delta}_{i,t}$ is a unit vector for the directional component of the velocity
+with Christian Stratton and Kathi Irvine
 
-#### Angular Heading
-$$\left(\delta_{x,i,t}, \delta_{y,i,t}\right)' = \left( \cos(\theta_{i,t}), \sin(\theta_{i,t}) \right)$$ 
-$$\theta_{i,t}  \sim ProjNormal(\mu, \kappa)$$
->- $\mu$ is an angular heading and $\kappa$ is a concentration parameter
+## Goal: Evaluate Monitoring Plan
 
-#### Speed
-$$u_{i,t} = LN(\mu_u, \sigma^2_u)$$
+```{r, out.width = "500px"}
+knitr::include_graphics("Tetonmap.png")
+```
+
+## Data collection
+
+```{r, out.width = "500px"}
+knitr::include_graphics("grid.png")
+```
+
+## Data structure
+
+```{r, out.width = "900px"}
+knitr::include_graphics("sage_data.png")
+```
+
+
+## Data Challenges
+
+>- We are interested in detecting changes across time; however, _changes_ is difficult to describe.
+
+- Changes would refer to comparisons across a set of grids with different species (60ish).
+
+- Changes are not as simple as more or less of a specific species of sagebrush, but rather focuses on the composition of the community of plants.
+
+## Sampling Effort Questions
+
+- How often and how many frames need to be monitored?
+
+- How to make comparisons between grids from different locations or times, given all of the different species?
+
+
+## Projection and Clustering
+
+```{r, out.width = "800px"}
+knitr::include_graphics("ord.png")
+```
+
+## Monitoring Plan 
+
+- Climate change related impacts will not be expected to vary dramatically from year-to-year
+
+- The composition of plant species can be projected into lower dimension to assess similarity. Differences can be assessed visually or with quantitative metrics.
+
+- Fewer grids/frames required on a yearly basis to identify large structural population differences.
+
+# Closing thoughts
+
+## Statistics is more than...
+
+
+```{r, out.width = "1000px"}
+knitr::include_graphics("z_panel.png")
+```
+
+
+## Statistics in your Backyard!
+
+
+```{r, out.width = "1000px"}
+knitr::include_graphics("all.png")
+```
 
